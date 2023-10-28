@@ -4,19 +4,39 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite dois números a serem somados: ");
-            int numero1 = Convert.ToInt32(Console.ReadLine());
-            int numero2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("O Resultado da soma é : " + Soma(numero1, numero2)) ;
-            Console.WriteLine("digite enter para finalizar o programa");
-            Console.ReadLine();
-    
+            Console.WriteLine("Olá mundo");
+            Carro carro = new Carro();
+            carro.DigaSeuNome();
+            Aviao aviao = new Aviao();
+            aviao.DigaSeuNome();
+            MeusTestes.Carro carroMeusTestes = new MeusTestes.Carro();
+            carroMeusTestes.DigaSeuNome();
+            Console.ReadKey();
         }
-
-        public static int Soma(int numero1, int numero2)
+    }
+    class Carro
+    {
+        public void DigaSeuNome()
         {
-            return numero1 + numero2;
+            Console.WriteLine("Meu nome é carro");
+        }
+    }
+
+    class Aviao
+    {
+        public void DigaSeuNome()
+        {
+            Console.WriteLine("Meu nome é avião");
+        }
+    }
+}
+namespace MeusTestes
+{
+    class Carro
+    {
+        public void DigaSeuNome()
+        {
+            Console.WriteLine("Meu nome é carro dentro do namespace MeusTestes");
         }
     }
 }
